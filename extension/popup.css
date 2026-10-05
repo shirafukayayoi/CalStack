@@ -1,0 +1,24 @@
+:root { color-scheme: light dark; font-family: system-ui, sans-serif; color: #22372c; background: #f5f8f5; }
+body { width: 340px; margin: 0; padding: 22px; box-sizing: border-box; }
+header { display: flex; align-items: center; gap: 12px; }
+.logo { font-size: 34px; color: #2f7150; }
+h1 { font-size: 23px; margin: 0; letter-spacing: -.6px; }
+header p { font-size: 12px; margin: 4px 0 0; color: #607568; }
+.account { font-size: 11px; overflow-wrap: anywhere; background: #e8eee9; padding: 9px 11px; border-radius: 8px; margin: 19px 0; }
+label { display: block; font-size: 12px; font-weight: 600; margin: 14px 0 6px; }
+select { width: 100%; padding: 9px; border: 1px solid #c9d7cd; border-radius: 7px; color: inherit; background: #fff; font: inherit; font-size: 12px; }
+.toggle { display: flex; align-items: center; gap: 8px; margin: 18px 0; }
+input { accent-color: #2f7150; width: 16px; height: 16px; }
+button { width: 100%; border: 0; border-radius: 8px; padding: 11px; font: inherit; font-weight: 600; font-size: 13px; background: #2f7150; color: white; cursor: pointer; }
+button:disabled { opacity: .45; cursor: default; }
+#status { font-size: 12px; line-height: 1.6; min-height: 38px; }
+footer { font-size: 11px; line-height: 1.7; color: #607568; border-top: 1px solid #dce5de; padding-top: 12px; }
+.legend { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.legend .calstack-badge { margin: 0; }
+footer p { margin: 10px 0 0; }
+@media (prefers-color-scheme: dark) {
+  :root { background: #19271f; color: #e4ece6; }
+  select { background: #25372b; border-color: #49614f; }
+  .account { background: #25372b; }
+  header p, footer { color: #a9bfae; }
+}

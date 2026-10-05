@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "CalStack",
+  "version": "0.3.1",
+  "description": "会社と自分のGoogleカレンダーの重複予定を、画面上でひとつにまとめます。",
+  "permissions": ["storage"],
+  "host_permissions": ["https://calendar.google.com/*"],
+  "action": {"default_title": "CalStack", "default_popup": "popup.html"},
+  "content_scripts": [{
+    "matches": ["https://calendar.google.com/calendar/*"],
+    "js": ["core.js", "adapter.js", "hints.js", "content.js"],
+    "css": ["content.css"],
+    "run_at": "document_idle"
+  }]
+}

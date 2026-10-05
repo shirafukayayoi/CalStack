@@ -1,0 +1,47 @@
+[data-calstack-title-row] {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  max-width: 100%;
+}
+[data-calstack-title-text] {
+  flex: 1 1 0%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 同じ行にある時刻やGoogleの印も圧縮しない。 */
+[data-calstack-title-row] > :not([data-calstack-title-text]) { flex-shrink: 0; }
+.calstack-badge {
+  display: inline-flex;
+  position: static;
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  margin-top: 2px;
+  color: inherit;
+  pointer-events: none;
+}
+.calstack-badge svg { display: block; width: 12px; height: 12px; }
+.calstack-badge .calstack-back { fill: currentColor; }
+.calstack-badge[data-calstack-cached] .calstack-back { fill: none; }
+[data-stacked-layout-chip] .calstack-badge { align-self: center; margin-top: 0; }
+[data-calstack-tooltip] {
+  position: fixed;
+  z-index: 2147483647;
+  box-sizing: border-box;
+  max-width: min(320px, calc(100vw - 16px));
+  max-height: calc(100vh - 16px);
+  overflow: hidden;
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: #202124;
+  color: #fff;
+  font: 12px/1.6 system-ui, sans-serif;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  box-shadow: 0 2px 8px #0003;
+  pointer-events: none;
+}
